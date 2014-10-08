@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dote 2 Hero Mastery</title>
+	<link href="./css/bootstrap.css" rel="stylesheet" />
+	<style>
+		h4 img{float:left;width:28px;height:28px;margin-right:8px;}
+		h3{text-align:center;font-size:28px;}
+		p{height:54px;text-align:center;}
+	</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+	<script type="text/javascript">
+
+window.Records = {
+	"Abaddon": 0,
+	"Alchemist": 0,
+	"Ancient_Apparition": 0,
+	"Anti-Mage": 0,
+	"Axe": 0,
+	"Bane": 0,
+	"Batrider": 0,
+	"Beastmaster": 2,
+	"Bloodseeker": 0,
+	"Bounty_Hunter": 24,
+	"Brewmaster": 0,
+	"Bristleback": 0,
+	"Broodmother": 29,
+	"Centaur_Warrunner": 0,
+	"Chaos_Knight": 0,
+	"Chen": 0,
+	"Clinkz": 0,
+	"Clockwerk": 26,
+	"Crystal_Maiden": 0,
+	"Dark_Seer": 0,
+	"Dazzle": 0,
+	"Death_Prophet": 0,
+	"Disruptor": 0,
+	"Doom": 0,
+	"Dragon_Knight": 0,
+	"Drow_Ranger": 0,
+	"Earth_Spirit": 0,
+	"Earthshaker": 0,
+	"Elder_Titan": 0,
+	"Ember_Spirit": 0,
+	"Enchantress": 0,
+	"Enigma": 0,
+	"Faceless_Void": 0,
+	"Gyrocopter": 0,
+	"Huskar": 0,
+	"Invoker": 0,
+	"Io": 0,
+	"Jakiro": 0,
+	"Juggernaut": 0,
+	"Keeper_of_the_Light": 30,
+	"Kunkka": 0,
+	"Legion_Commander": 0,
+	"Leshrac": 0,
+	"Lich": 0,
+	"Lion": 0,
+	"Lone_Druid": 30,
+	"Luna": 0,
+	"Lycan": 0,
+	"Magnus": 0,
+	"Medusa": 0,
+	"Meepo": 0,
+	"Mirana": 0,
+	"Morphling": 0,
+	"Naga_Siren": 0,
+	"Natures_Profit": 28,
+	"Necrophos": 0,
+	"Night_Stalker": 0,
+	"Nyx_Assassin": 0,
+	"Ogre_Magi": 0,
+	"Omniknight": 0,
+	"Outworld_Ddevourer": 0,
+	"Phantom_Lancer": 0,
+	"Phoenix": 0,
+	"Puck": 0,
+	"Pudge": 0,
+	"Pugna": 0,
+	"Queen_of_Pain": 0,
+	"Razor": 0,
+	"Riki": 0,
+	"Rubick": 0,
+	"Sand_King": 0,
+	"Shadow_Demon": 0,
+	"Shadow_Fiend": 0,
+	"Shadow_Shaman": 0,
+	"Silencer": 0,
+	"Skywrath_Mage": 0,
+	"Slardar": 0,
+	"Slark": 0,
+	"Sniper": 0,
+	"Spectre": 0,
+	"Spirit_Breaker": 0,
+	"Sven": 0,
+	"Storm_Spirit": 0,
+	"Techies": 0,
+	"Templar_Assassin": 0,
+	"Terrorblade": 0,
+	"Timbersaw": 0,
+	"Tinker": 0,
+	"Tiny": 0,
+	"Treant_Protector": 0,
+	"Troll_Warlord": 0,
+	"Tusk": 0,
+	"Undying": 0,
+	"Ursa": 0,
+	"Vengeful_Spirit": 0,
+	"Venomancer": 0,
+	"Viper": 0,
+	"Visage": 0,
+	"Warlock": 0,
+	"Weaver": 0,
+	"Windranger": 0,
+	"Witch_Doctor": 0,
+	"Wraith_King": 0,
+	"Zeus": 0
+}
+
+
+window.Total = 0;
+window.Prog = 0;
+          $(document).ready(function(){
+              _.each(window.Records, function(count, name){
+                  $('tbody').append("<tr><td><img src='./heroes/80px-"+name+".png' /></td><td>"+name+"</td><td>"+count+"</td></tr>");
+				  window.Total += 30;
+				  window.Prog += count;
+              }, this);
+
+			  $('.progress-bar').css('width',  ((window.Prog / window.Total) * 100) +"%").css('font-size', "18px");
+			  $('.progress-bar b').text( Math.round((window.Prog / window.Total) * 100) );
+          });
+	</script>
+</head>
+
+<body>
+<h3>Dote 2 Hero Challenge Progress</h3>
+<div style="padding:20px;">
+<div class="progress">
+  <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+    <span class=""><b>60</b>% Complete</span>
+  </div>
+</div>
+</div>
+<p>Get all heroes to 30 games played min</p>
+
+<table class="table">
+<thead>
+<tr><th>Pic</th><th>Name</th><th>Progress</th></tr>
+</thead>
+<tbody>
+
+</tbody>
+</table>
+
+
+</body>
+
+</html>
