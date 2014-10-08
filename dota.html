@@ -56,7 +56,7 @@ window.Records = {
 	"Jakiro": 0,
 	"Juggernaut": 0,
 	"Keeper_of_the_Light": 30,
-	"Kunkka": 0,
+	"Kunkka": 16,
 	"Legion_Commander": 0,
 	"Leshrac": 0,
 	"Lich": 0,
@@ -105,7 +105,7 @@ window.Records = {
 	"Timbersaw": 0,
 	"Tinker": 0,
 	"Tiny": 0,
-	"Treant_Protector": 0,
+	"Treant_Protector": 28,
 	"Troll_Warlord": 0,
 	"Tusk": 0,
 	"Undying": 0,
@@ -115,7 +115,7 @@ window.Records = {
 	"Viper": 0,
 	"Visage": 0,
 	"Warlock": 0,
-	"Weaver": 0,
+	"Weaver": 19,
 	"Windranger": 0,
 	"Witch_Doctor": 0,
 	"Wraith_King": 0,
@@ -127,7 +127,10 @@ window.Total = 0;
 window.Prog = 0;
           $(document).ready(function(){
               _.each(window.Records, function(count, name){
-                  $('tbody').append("<tr><td><img src='./heroes/80px-"+name+".png' /></td><td>"+name+"</td><td>"+count+"</td></tr>");
+				  var tr = "";
+				  if(count > 10){ tr = " style='background:#f0ad4e;'"; }
+				  if(count == 30){ tr = " style='background:green;'"; }
+                  $('tbody').append("<tr"+tr+"><td><img src='./heroes/80px-"+name+".png' /></td><td>"+name+"</td><td>"+count+"</td></tr>");
 				  window.Total += 30;
 				  window.Prog += count;
               }, this);
